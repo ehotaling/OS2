@@ -5,8 +5,9 @@ public class Init extends UserlandProcess {
         OS.CreateProcess(new HelloWorld(), OS.PriorityType.interactive);
         OS.CreateProcess(new GoodbyeWorld(), OS.PriorityType.background);
         OS.CreateProcess(new RealTimeProcess(), OS.PriorityType.realtime);
+        OS.CreateProcess(new SleepTestProcess(), OS.PriorityType.interactive);
 
-        // After setup, exit Init.
+        // After setting up the processes, exit Init.
         OS.Exit();
     }
 }

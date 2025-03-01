@@ -7,10 +7,10 @@ public abstract class Process implements Runnable {
 
     public Process() {
         semaphore = new Semaphore(0); // Process starts blocked.
-        // Do not start the thread here.
+        // Do not start the thread automatically.
     }
 
-    // Explicitly launch the thread; must be called after the process is fully constructed.
+    // Launch the thread once construction is complete.
     public void launch() {
         thread = new Thread(this);
         thread.start();
